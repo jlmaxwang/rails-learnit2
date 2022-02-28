@@ -1,0 +1,13 @@
+<h1>lesson show page</h1>
+<div>
+  <ul>
+    <li>Lesson name:<%= @lesson.title %></li>
+    <li>Lesson category:<%= @lesson.category %></li>
+    <li>Lesson rating:<%= @lesson.rating %></li>
+    <li>Lesson tutor:<%= @lesson.user.email %></li>
+  </ul>
+</div>
+<%= link_to"Lessons index", lessons_path %>
+<%= link_to"edit this lesson", edit_lesson_path %>
+<%= link_to "add a new session", new_lesson_session_path(params[:id]) %>
+<%= link_to "show session", lesson_session_path(params[:id]) %>
