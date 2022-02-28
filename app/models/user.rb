@@ -4,5 +4,5 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
         :recoverable, :rememberable, :validatable
   has_many :lessons
-  has_many :seesions, through: :lessons
+  has_many :sessions, through: :lessons
 end
