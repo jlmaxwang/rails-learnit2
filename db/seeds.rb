@@ -5,3 +5,6 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+Lesson.create(title:'Rubby on rails lesson', category:'coding', rating:'this lesson is so good', user_id:'2')
+Lesson.create(title:'Javascript lesson', category:'coding', rating:'this lesson is very good', user_id:'3')
+Lesson.create(title:'Javascript lesson', category:'coding', rating:'this lesson is sooooooo good', user_id:'3')
