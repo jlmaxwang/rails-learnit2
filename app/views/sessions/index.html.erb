@@ -1,0 +1,12 @@
+<h1>sessions</h1>
+<h2>lesson name: <%= @lesson.title %></h2>
+<ul>
+  <% if @sessions.nil? %>
+    <p>No session for this lesson</p>
+  <% else %>
+    <% @sessions.each do |session| %>
+      <li><%= session.schedule %></li>
+  <% end %>
+      <%= link_to 'Destroy', @session, method: :delete, data: { confirm: 'Are you sure?' } %>
+  <% end %>
+</ul>
