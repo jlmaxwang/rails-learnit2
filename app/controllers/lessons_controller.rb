@@ -16,7 +16,7 @@ class LessonsController < ApplicationController
     @lesson = Lesson.new(lesson_params)
     # @lesson.user = current_user
     if @lesson.save
-      redirect_to lesson_path(@lesson), notice: 'lesson was successfully created.'
+      redirect_to lesson_path(@lesson), notice: 'Your lesson was successfully created.'
     else
       render :new
     end
