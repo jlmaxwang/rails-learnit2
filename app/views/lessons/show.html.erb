@@ -1,6 +1,7 @@
 <h1>lesson show page</h1>
 <div>
   <ul>
+  <%= cl_image_tag @lesson.photo.key, height: 300, width: 400, crop: :fill %>
     <li>Lesson name:<%= @lesson.title %></li>
     <li>Lesson category:<%= @lesson.category %></li>
     <li>Lesson rating:<%= @lesson.rating %></li>
