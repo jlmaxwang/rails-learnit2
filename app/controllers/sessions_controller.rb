@@ -1,12 +1,9 @@
 class SessionsController < ApplicationController
-  before_action :set_session, only:[:show, :edit, :update, :destroy]
+  before_action :set_session, only:[:edit, :update, :destroy]
   before_action :set_lesson
 
   def index
     @sessions = Session.all
-  end
-
-  def show
   end
 
   def new
@@ -18,7 +15,7 @@ class SessionsController < ApplicationController
     @session.lesson = @lesson
     @session.lesson.user = @user
     if @session.save
-      redirect_to
+      redirect_to lesson_sessions_path(@lesson)
     else
       render :new
     end
@@ -37,7 +34,7 @@ class SessionsController < ApplicationController
 
   def destroy
     @session.destroy
-    redirect_to lesson_
+    redirect_to lesson_sessions_path
   end
 
   private
@@ -47,7 +44,11 @@ class SessionsController < ApplicationController
   end
 
   def set_session
-    @session = Session.find(params[:lesson_id])
+    if @session.nil?
+      flash.alert = 'No session for this lesson yet'
+    else
+      @session = Session.find(params[:lesson_id])
+    end
   end
 
   def session_params
