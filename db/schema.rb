@@ -10,11 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-# <<<<<<< calender
-# ActiveRecord::Schema.define(version: 2022_03_01_055024) do
-# =======
-# ActiveRecord::Schema.define(version: 2022_03_01_033558) do
-# >>>>>>> master
+ActiveRecord::Schema.define(version: 2022_03_01_055024) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
