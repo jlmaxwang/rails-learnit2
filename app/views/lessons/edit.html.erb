@@ -1,0 +1,9 @@
+<h1>edit this lesson</h1>
+<%= simple_form_for @lesson do |f| %>
+    <%= f.input :title %>
+    <%= f.input :category %>
+    <%= f.input :rating %>
+    <%= f.input :user_id, promt: 'select a user' %>
+    <%= f.button :submit %>
+<% end %>
+<%= link_to "Back", lessons_path %>

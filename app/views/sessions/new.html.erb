@@ -1,0 +1,7 @@
+<h1>Create a new session for <%= @lesson.title %></h1>
+<%= simple_form_for([ @lesson, @session ]) do |f| %>
+  <%= f.input :schedule %>
+  <%= f.input :lesson_id %>
+  <%= f.input :user_id %>
+  <%= f.submit "Submit session" %>
+<% end %>
