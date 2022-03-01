@@ -98,6 +98,8 @@ GEM
     ffi (1.15.5)
     font-awesome-sass (5.15.1)
       sassc (>= 1.11)
+    fullcalendar (3.9.0)
+      momentjs-rails (~> 2.20.1)
     globalid (1.0.0)
       activesupport (>= 5.0)
     i18n (1.10.0)
@@ -118,6 +120,8 @@ GEM
     method_source (1.0.0)
     mini_mime (1.1.2)
     minitest (5.15.0)
+    momentjs-rails (2.20.1)
+      railties (>= 3.1)
     msgpack (1.4.5)
     nio4r (2.5.8)
     nokogiri (1.13.3-arm64-darwin)
@@ -198,6 +202,8 @@ GEM
       rexml (~> 3.2, >= 3.2.5)
       rubyzip (>= 1.2.2)
     semantic_range (3.0.0)
+    simple_calendar (2.4.3)
+      rails (>= 3.0)
     simple_form (5.1.0)
       actionpack (>= 5.2)
       activemodel (>= 5.2)
@@ -251,6 +257,7 @@ DEPENDENCIES
   devise
   dotenv-rails
   font-awesome-sass
+  fullcalendar
   jbuilder (~> 2.7)
   listen (~> 3.3)
   pg (~> 1.1)
@@ -262,6 +269,7 @@ DEPENDENCIES
   rails (~> 6.1.4, >= 6.1.4.6)
   sass-rails (>= 6)
   selenium-webdriver
+  simple_calendar (~> 2.4)
   simple_form
   spring
   turbolinks (~> 5)
