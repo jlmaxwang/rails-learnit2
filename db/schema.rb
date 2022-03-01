@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_02_28_054958) do
+ActiveRecord::Schema.define(version: 2022_03_01_055024) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -26,7 +26,7 @@ ActiveRecord::Schema.define(version: 2022_02_28_054958) do
   end
 
   create_table "sessions", force: :cascade do |t|
-    t.string "schedule"
+    t.datetime "schedule"
     t.bigint "user_id", null: false
     t.bigint "lesson_id", null: false
     t.datetime "created_at", precision: 6, null: false
