@@ -1,4 +1,5 @@
 <%= render 'shared/navbar' %>
+
 <div>
   <h1 style="text-align:center">Lessons available</h1>
   <div class="container-cards">
@@ -13,23 +14,15 @@
               <p><%= link_to "Details", lesson_path(lesson), class: "btn btn-gradient"%></p>
             </div>
             <div>
-              <h2 class="card-trip-rating"><%= '$99.99' %></h2>
+              <h2 class="card-trip-rating"><%= "$#{lesson.price}" %></h2>
               <p class="card-trip-rating"><%= "★ #{lesson.rating}" %></p>
               <p><%= link_to "Sessions", "#", class: "btn btn-gradient"%></p>
             </div>
             <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
           </div>
-        <div>
-          <% if policy(lesson).show? %>
-          <a href="<%= lesson_path(lesson) %>" class="card-link">Details</a>
-          <% end %>
-          <% if policy(lesson).show? %>
-          <% if false %>
-          <a href="<%= lesson_sessions_path(params[:lesson_id])%>" class="card-link">Sessions</a>
-          <% end %>
-          <% end %>
         </div>
       <% end %>
-<% if policy(Lesson).create? %>
-<%= link_to "Create a new lesson", new_lesson_path %>
-<% end %>
+  </div>
+</div>
+
+<%= link_to "Create a new lesson", new_lesson_path, class: "btn btn-gradient" %>
