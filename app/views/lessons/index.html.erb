@@ -6,8 +6,7 @@
   <div class="container-cards">
       <% @lessons.each do |lesson| %>
         <div class="card-trip mb-3">
-
-          <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
+          <%= cl_image_tag lesson.photo.key %>
           <div class="card-trip-infos">
             <div>
               <h2><%= lesson.title %></h2>
