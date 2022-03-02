@@ -19,16 +19,17 @@
             </div>
             <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
           </div>
-        <div class="card-body">
-    <% if policy(lesson).show? %>
-    <a href="<%= lesson_path(lesson) %>" class="card-link">Details</a>
-    <% end %>
-    <% if policy(lesson).show? %>
-    <% if false %>
-    <a href="<%= lesson_sessions_path(params[:lesson_id])%>" class="card-link">Sessions</a>
-    <% end %>
-    <% end %>
-  </div>
+        <div>
+          <% if policy(lesson).show? %>
+          <a href="<%= lesson_path(lesson) %>" class="card-link">Details</a>
+          <% end %>
+          <% if policy(lesson).show? %>
+          <% if false %>
+          <a href="<%= lesson_sessions_path(params[:lesson_id])%>" class="card-link">Sessions</a>
+          <% end %>
+          <% end %>
+        </div>
+      <% end %>
 <% if policy(Lesson).create? %>
 <%= link_to "Create a new lesson", new_lesson_path %>
 <% end %>
