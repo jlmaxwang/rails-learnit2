@@ -19,7 +19,15 @@
               <p class="card-trip-rating"><%= "★ #{lesson.rating}" %></p>
               <p><%= link_to "Sessions", lesson_sessions_path(lesson), class: "btn btn-gradient"%></p>
             </div>
-            <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
+
+              <% if !current_user.nil? %>
+                <% if lesson.user.avatar.present? %>
+                  <%= image_tag lesson.user.avatar, class: "card-trip-user avatar-bordered" %>
+                <% else %>
+                    <%= image_tag "https://res.cloudinary.com/fantastic-four/image/upload/v1646222179/development/5gcjh4kw0fvinmnk97ihx41v3v0a.gif",class: "card-trip-user avatar-bordered" %>
+              <% end %>
+              <% end %>
+            <%# <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" /> %>
           </div>
         </div>
       <% end %>
@@ -27,3 +35,14 @@
 </div>
 
 <%= link_to "Create a new lesson", new_lesson_path, class: "btn btn-gradient" %>
+<% if false %>
+<%# avatar image tag for current user %>
+  <% if !current_user.nil? %>
+    <% if current_user.avatar.present? %>
+      <%= image_tag current_user.avatar, class: "card-trip-user avatar-bordered" %>
+    <% else %>
+      <%= image_tag "https://res.cloudinary.com/fantastic-four/image/upload/v1646191493/development/mf6nwfathzuc8uptro4lrjpn8woa.png", class: "card-trip-user avatar-bordered" %>
+    <% end %>
+  <% end %>
+<% end %>
+<%# avatar image tag end %>

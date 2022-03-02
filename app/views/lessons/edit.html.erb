@@ -1,10 +1,13 @@
+<%= render 'shared/navbar' %>
+
 <h1>edit this lesson</h1>
 <%= simple_form_for @lesson do |f| %>
     <%= f.input :title %>
     <%= f.input :category %>
     <%= f.input :rating %>
     <%= f.input :description %>
-    <%= f.input :user_id, prompt: 'select a user' %>
+    <%= f.association :user, label: "Your are editing a new lesson",
+:as => :hidden, :input_html => { :value => current_user.id }  %>
     <%= f.button :submit %>
 <% end %>
 <%= link_to "Back", lessons_path %>
