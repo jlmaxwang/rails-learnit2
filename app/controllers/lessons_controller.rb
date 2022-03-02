@@ -19,7 +19,7 @@ class LessonsController < ApplicationController
     # @lesson.user = current_user
     authorize @lesson
     if @lesson.save
-      redirect_to lesson_path(@lesson), notice: 'Lesson was successfully created.'
+      redirect_to lesson_path(@lesson), notice: 'Your lesson was successfully created.'
     else
       render :new
     end

@@ -1,40 +1,25 @@
 <%= render 'shared/navbar' %>
-<h1>Lessons available</h1>
-<% if false %>
-<%# Alex's boiler plate %>
-<div class="container-cards">
-    <% @lessons.each do |lesson| %>
-      <div class="card-trip mb-3">
-        <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg"alt />
-        <div class="card-trip-infos">
-          <div>
-            <h2><%= lesson.title %></h2>
-            <p><%= lesson.category %></p>
-            <p><%= link_to "Details", lesson_path(lesson), class: "btn btn-gradient"%></p>
+<div>
+  <h1 style="text-align:center">Lessons available</h1>
+  <div class="container-cards">
+      <% @lessons.each do |lesson| %>
+        <div class="card-trip mb-3">
+          <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
+          <div class="card-trip-infos">
+            <div>
+              <h2><%= lesson.title %></h2>
+              <p><%= lesson.category %></p>
+            <p>This is a short description of the lesson.</p>
+              <p><%= link_to "Details", lesson_path(lesson), class: "btn btn-gradient"%></p>
+            </div>
+            <div>
+              <h2 class="card-trip-rating"><%= '$99.99' %></h2>
+              <p class="card-trip-rating"><%= "★ #{lesson.rating}" %></p>
+              <p><%= link_to "Sessions", "#", class: "btn btn-gradient"%></p>
+            </div>
+            <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
           </div>
-          <div>
-            <h2 class="card-trip-pricing"><%= lesson.rating %></h2>
-          </div>
-          <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
-        </div>
-      </div>
-
-    <% end %>
-
-</div>
-<% end %>
-<%# new card responsive %>
-<% @lessons.each do |lesson| %>
-<div class="card" style="width: 18rem;">
-  <img src="<%= lesson.photo%>" class="card-img-top" alt="lesson img">
-  <div class="card-body">
-    <h5 class="card-title"><%= lesson.title %></h5>
-    <p class="card-text"><%= lesson.category %></p>
-  </div>
-  <ul class="list-group list-group-flush">
-    <li class="list-group-item"><%= lesson.rating %></li>
-  </ul>
-  <div class="card-body">
+        <div class="card-body">
     <% if policy(lesson).show? %>
     <a href="<%= lesson_path(lesson) %>" class="card-link">Details</a>
     <% end %>
@@ -44,8 +29,6 @@
     <% end %>
     <% end %>
   </div>
-</div>
-<% end %>
 <% if policy(Lesson).create? %>
 <%= link_to "Create a new lesson", new_lesson_path %>
 <% end %>
