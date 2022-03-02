@@ -1,3 +1,5 @@
+<%= render 'shared/navbar' %>
+
 <h1>lesson show page</h1>
 <div>
   <ul>
@@ -10,5 +12,6 @@
 </div>
 <%= link_to"Lessons index", lessons_path %>
 <%= link_to"edit this lesson", edit_lesson_path %>
+<%= link_to "Delete this lesson", @lesson, method: :delete, data:{ confirm: 'Are you sure?' }  %>
 <%= link_to "add a new session", new_lesson_session_path(params[:id]) %>
 <%= link_to "show session", lesson_sessions_path(params[:id]) %>
