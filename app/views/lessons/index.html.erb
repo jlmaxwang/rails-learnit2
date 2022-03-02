@@ -5,6 +5,7 @@
   <div class="container-cards">
       <% @lessons.each do |lesson| %>
         <div class="card-trip mb-3">
+
           <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
           <div class="card-trip-infos">
             <div>
@@ -16,7 +17,7 @@
             <div>
               <h2 class="card-trip-rating"><%= "$#{lesson.price}" %></h2>
               <p class="card-trip-rating"><%= "★ #{lesson.rating}" %></p>
-              <p><%= link_to "Sessions", "#", class: "btn btn-gradient"%></p>
+              <p><%= link_to "Sessions", lesson_sessions_path(lesson), class: "btn btn-gradient"%></p>
             </div>
             <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
           </div>
