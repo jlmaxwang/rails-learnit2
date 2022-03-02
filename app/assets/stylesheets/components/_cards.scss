@@ -1,7 +1,7 @@
 .card-trip {
   overflow: hidden;
   background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.7);
+  box-shadow: 0 0 4px #E8E6E6;
   // display: grid;
   // grid-template-columns: 1fr 1fr 1fr 1fr;
   // grid-gap: 16px;
@@ -14,7 +14,7 @@
   margin: 100px;
 }
 
-.card-trip-pricing{
+.card-trip-rating {
   display: flex;
   justify-content: flex-end;
 }
