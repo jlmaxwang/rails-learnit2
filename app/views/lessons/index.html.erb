@@ -19,7 +19,14 @@
               <p class="card-trip-rating"><%= "★ #{lesson.rating}" %></p>
               <p><%= link_to "Sessions", lesson_sessions_path(lesson), class: "btn btn-gradient"%></p>
             </div>
-              <%= image_tag lesson.user.avatar, class: "card-trip-user avatar-bordered" %>
+
+              <% if !current_user.nil? %>
+                <% if lesson.user.avatar.present? %>
+                  <%= image_tag lesson.user.avatar, class: "card-trip-user avatar-bordered" %>
+                <% else %>
+                    <%= image_tag "https://res.cloudinary.com/fantastic-four/image/upload/v1646222179/development/5gcjh4kw0fvinmnk97ihx41v3v0a.gif",class: "card-trip-user avatar-bordered" %>
+              <% end %>
+              <% end %>
             <%# <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" /> %>
           </div>
         </div>
