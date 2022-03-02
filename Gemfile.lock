@@ -102,6 +102,9 @@ GEM
     erubi (1.10.0)
     execjs (2.7.0)
     ffi (1.15.5)
+    file_validators (3.0.0)
+      activemodel (>= 3.2)
+      mime-types (>= 1.0)
     font-awesome-sass (5.15.1)
       sassc (>= 1.11)
     globalid (1.0.0)
@@ -273,6 +276,7 @@ DEPENDENCIES
   cloudinary (~> 1.16.0)
   devise
   dotenv-rails
+  file_validators
   font-awesome-sass
   jbuilder (~> 2.7)
   listen (~> 3.3)
