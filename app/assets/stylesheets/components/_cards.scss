@@ -1,47 +1,56 @@
-.card-trip {
-  overflow: hidden;
-  background: white;
-  box-shadow: 0 0 4px #E8E6E6;
-  // display: grid;
-  // grid-template-columns: 1fr 1fr 1fr 1fr;
-  // grid-gap: 16px;
-}
-
 .container-cards {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 16px;
   margin: 100px;
 }
+.card-index {
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 0 4px #E8E6E6;
+  border-radius: 16px;
+  transition: transform 0.6s, box-shadow 0.6s;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
 
-.card-trip-rating {
+.card-index:hover {
+  -webkit-transform: scale(1.05);
+  transform: scale(1.05);
+  -webkit-box-shadow: 0 10px 30px rgba(0,0,0,0.23), 0 15px 40px rgba(166,173,201,.2);
+  box-shadow: 0 10px 10px rgba(0,0,0,0.23), 0 15px 40px rgba(166,173,201,.2);
+}
+
+.card-index a:link {
+  text-decoration: none;
+}
+
+
+.card-index-rating {
   display: flex;
   justify-content: flex-end;
 }
 
-.card-trip > img {
+.card-index img {
   height: 200px;
   width: 100%;
   object-fit: cover;
 }
 
-.card-trip h2 {
+.card-index h2 {
   font-size: 16px;
   font-weight: bold;
   margin: 0;
 }
 
-.card-trip p {
+.card-index p {
   font-size: 12px;
   opacity: .7;
   margin: 0;
 }
-// .card-trip-infos {
-//   display: flex;
-// }
 
-
-.card-trip .card-trip-infos {
+.card-index .card-index-infos {
   padding: 16px;
   display: flex;
   justify-content: space-between;
@@ -49,9 +58,17 @@
   position: relative;
 }
 
-.card-trip-infos .card-trip-user {
+.card-index-infos .card-index-user {
   position: absolute;
   right: 16px;
-  top: -30px;
-  width: 50px;
+  top: -20px;
+  width: 40px;
+  height: 40px;
 }
+
+// #card-index-numbers {
+//   padding: 16px;
+//   display: flex;
+//   justify-content: right;
+//   align-items: flex-start;
+// }

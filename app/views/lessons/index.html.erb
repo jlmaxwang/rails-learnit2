@@ -3,32 +3,38 @@
 <div>
 <br><br><br><br><br>
   <h1 style="text-align:center">Lessons available</h1>
+      <div class="column d-flex justify-content-center flex-nowrap">
+        <%= form_with(url: "/", method: :get, data: {action: "submit->search#submit"}) do |f| %>
+        <%= label_tag(:query, "") %>
+        <%= text_field_tag(:query) %>
+        <%= submit_tag("Search", class: "btn btn-primary") %>
+        <% end %>
+      </div>
   <div class="container-cards">
       <% @lessons.each do |lesson| %>
-        <div class="card-trip mb-3">
-          <%= cl_image_tag lesson.photo.key %>
-          <div class="card-trip-infos">
-            <div>
-              <h2><%= lesson.title %></h2>
-              <p><%= lesson.category %></p>
-              <p><%= lesson.description %></p>
-              <p><%= link_to "Details", lesson_path(lesson), class: "btn btn-gradient"%></p>
-            </div>
-            <div>
-              <h2 class="card-trip-rating"><%= "$#{lesson.price}" %></h2>
-              <p class="card-trip-rating"><%= "★ #{lesson.rating}" %></p>
-              <p><%= link_to "Sessions", lesson_sessions_path(lesson), class: "btn btn-gradient"%></p>
-            </div>
+        <div class="card-index mb-3">
+          <%= link_to lesson_path(lesson) do %>
+            <%= cl_image_tag lesson.photo.key %>
+            <div class="card-index-infos">
+              <div>
+                <h2><%= lesson.title %></h2>
+                <p><%= lesson.category %></p>
+                <p><%= lesson.description %></p>
+              </div>
+              <div>
+                <h2 class="card-index-rating"><%= "$#{lesson.price}" %></h2>
+                <p class="card-index-rating"><%= "★ #{lesson.rating}" %></p>
+              </div>
 
-              <% if !current_user.nil? %>
-                <% if lesson.user.avatar.present? %>
-                  <%= image_tag lesson.user.avatar, class: "card-trip-user avatar-bordered" %>
-                <% else %>
-                    <%= image_tag "https://res.cloudinary.com/fantastic-four/image/upload/v1646222179/development/5gcjh4kw0fvinmnk97ihx41v3v0a.gif",class: "card-trip-user avatar-bordered" %>
-              <% end %>
-              <% end %>
-            <%# <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" /> %>
-          </div>
+                <% if !current_user.nil? %>
+                  <% if lesson.user.avatar.present? %>
+                    <%= image_tag lesson.user.avatar, class: "card-index-user avatar-bordered" %>
+                  <% else %>
+                      <%= image_tag "https://res.cloudinary.com/fantastic-four/image/upload/v1646222179/development/5gcjh4kw0fvinmnk97ihx41v3v0a.gif",class: "card-index-user avatar-bordered" %>
+                  <% end %>
+                <% end %>
+            </div>
+          <% end %>
         </div>
       <% end %>
   </div>
@@ -39,9 +45,9 @@
 <%# avatar image tag for current user %>
   <% if !current_user.nil? %>
     <% if current_user.avatar.present? %>
-      <%= image_tag current_user.avatar, class: "card-trip-user avatar-bordered" %>
+      <%= image_tag current_user.avatar, class: "card-index-user avatar-bordered" %>
     <% else %>
-      <%= image_tag "https://res.cloudinary.com/fantastic-four/image/upload/v1646191493/development/mf6nwfathzuc8uptro4lrjpn8woa.png", class: "card-trip-user avatar-bordered" %>
+      <%= image_tag "https://res.cloudinary.com/fantastic-four/image/upload/v1646191493/development/mf6nwfathzuc8uptro4lrjpn8woa.png", class: "card-index-user avatar-bordered" %>
     <% end %>
   <% end %>
 <% end %>
