@@ -11,8 +11,8 @@
     <li>Lesson tutor: <%= @lesson.user.email %></li>
   </ul>
 </div>
-<%= link_to"Go back", lessons_path %>
-<%= link_to"Edit", edit_lesson_path %>
-<%= link_to "Delete", @lesson, method: :delete, data:{ confirm: 'Are you sure?' }  %>
-<%= link_to "Add session", new_lesson_session_path(params[:id]) %>
-<%= link_to "View available times", lesson_sessions_path(params[:id]) %>
+<%= link_to"Go back", lessons_path, class: "btn btn-gradient" %>
+<%= link_to"Edit", edit_lesson_path, class: "btn btn-gradient" %>
+<%= link_to "Delete", @lesson, method: :delete, data:{ confirm: 'Are you sure?' }, class: "btn btn-gradient" %>
+<%= link_to "Book session", new_lesson_session_path(params[:id]), class: "btn btn-gradient" %>
+<%= link_to "View available times", lesson_sessions_path(params[:id]), class: "btn btn-gradient" %>
