@@ -2,7 +2,15 @@ class LessonsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index]
   before_action :set_lesson, only:[:show, :edit, :update, :destroy]
   def index
-    @lessons = policy_scope(Lesson)
+    if params[:query].present?
+      @lessons = policy_scope(Lesson).search_by_title_and_description_and_category(params[:query])
+    else
+      @lessons = policy_scope(Lesson)
+    end
+    respond_to do |format|
+      format.html
+      format.json { render json: { lessons: @lessons } }
+    end
   end
 
   def show

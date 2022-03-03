@@ -3,6 +3,13 @@
 <div>
 <br><br><br><br><br>
   <h1 style="text-align:center">Lessons available</h1>
+      <div class="column d-flex justify-content-center flex-nowrap">
+        <%= form_with(url: "/", method: :get, data: {action: "submit->search#submit"}) do |f| %>
+        <%= label_tag(:query, "") %>
+        <%= text_field_tag(:query) %>
+        <%= submit_tag("Search", class: "btn btn-primary") %>
+        <% end %>
+      </div>
   <div class="container-cards">
       <% @lessons.each do |lesson| %>
         <div class="card-trip mb-3">
