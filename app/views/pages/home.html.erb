@@ -1,36 +1,31 @@
 <%= render 'shared/navbar' %>
-<% if false %>
-<div>
-  <ul>
-  <% @lessons.each do |lesson| %>
-    <li>Title:<%= lesson.title %></li>
-    <li><%= lesson.category %></li>
-    <li><%= lesson.rating %></li>
-    <li><%= lesson.user.email %></li>
-    <li><%= link_to "detail of this lesson", lesson_path(lesson) %></li>
-    <% end %>
-  </ul>
-</div>
-<%= link_to "Create a new lesson", new_lesson_path %>
-<% end %>
-<div class="container-cards">
-    <% @lessons.each do |lesson| %>
-      <div class="card-trip mb-3">
-        <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
-        <div class="card-trip-infos">
-          <div>
-            <h2><%= lesson.title %></h2>
-            <p><%= lesson.category %></p>
-            <p><%= link_to "Details", lesson_path(lesson), class: "btn btn-gradient"%></p>
-          </div>
-          <div>
-            <h2 class="card-trip-pricing"><%= lesson.rating %></h2>
-            <p><%= link_to "Sessions", "#", class: "btn btn-gradient"%></p>
-          </div>
-          <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
-        </div>
-      </div>
+<head>
+<title>My landing page</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
 
-    <% end %>
 
-</div>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- code a Hero / Banner section -->
+  <div class="banner">
+    <div class="container">
+      <h1>Le Wagon brings tech skills to creative people!</h1>
+      <p>Change your life and learn to code at one of our campuses around the world.</p>
+      <a class="btn-gradient" href="/lessons">Apply now!</a>
+    </div>
+  </div>
+
+  <!-- code a footer -->
+
+
+  <%# <div class="footer">
+    <div class="links">
+      <a href="#"><i class="fab fa-fw fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-fw fa-github"></i></a>
+      <a href="#"><i class="fab fa-fw fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-fw fa-instagram"></i></a>
+      <p>This website was coded with <i class="fas fa-heart"></i> at Le Wagon.</p>
+
+    </div>
+  </div> %>

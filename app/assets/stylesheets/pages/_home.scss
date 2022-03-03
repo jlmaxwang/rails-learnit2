@@ -1,1 +1,88 @@
 // Specific CSS for your home-page
+
+//code from banner.css landing page challenge
+.banner {
+  height: 600px;
+  margin: 0;
+  background-image: url("https://static.wixstatic.com/media/11062b_77fe0ce186364935834679b2a34f806f~mv2.jpeg/v1/fill/w_1377,h_829,al_c,q_85,usm_0.66_1.00_0.01/11062b_77fe0ce186364935834679b2a34f806f~mv2.webp");
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner h1 {
+  color: #FFB835;
+  text-shadow: rgba(0, 0, 0, 0.4) 0px 4px 5px;
+}
+
+.banner p {
+  color: grey;
+}
+
+//from card.css landing page challenge
+.cards {
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+  height: 250px;
+}
+
+.card {
+  border: 1px solid rgba(202, 202, 202, 0.8);
+  border-radius: 5px;
+  /* padding: 30px; */
+}
+
+.card img {
+  height: 100px;
+  margin-top: 20px;
+}
+
+.card p {
+  word-wrap: normal;
+}
+
+//from style.css landing page challenge
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700|Poppins:700');
+
+/* Utilities */
+body {
+  margin: 0;
+  font-family: Open Sans;
+}
+
+h1, h2, h3, h4 {
+  font-family: Poppins;
+}
+
+a {
+  text-decoration: none;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* Custom design below! */
+
+.container {
+  width: 900px;
+  margin: auto;
+}
+
+.banner {
+  background-image: url("https://static.wixstatic.com/media/11062b_77fe0ce186364935834679b2a34f806f~mv2.jpeg/v1/fill/w_1377,h_829,al_c,q_85,usm_0.66_1.00_0.01/11062b_77fe0ce186364935834679b2a34f806f~mv2.webp");
+  background-size: cover;
+  background-position: center;
+  padding: 450px 0;
+}
+
+.banner h1 {
+  color: #FFB835;
+}
+
+.banner p {
+  color: #FFB835;
+  opacity: .7;
+  font-size: 20px;
+}
