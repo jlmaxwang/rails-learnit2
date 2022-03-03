@@ -1,8 +1,5 @@
 <%= render 'shared/navbar' %>
 
-<div>
-<br>
-  <h1 style="text-align:center">Lessons available</h1>
   <div class="container-cards">
       <% @lessons.each do |lesson| %>
         <div class="card-index mb-3">
@@ -31,7 +28,6 @@
         </div>
       <% end %>
   </div>
-</div>
 
 <% if false %>
 <%# avatar image tag for current user %>
