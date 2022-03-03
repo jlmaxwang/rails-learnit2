@@ -2,10 +2,8 @@
   overflow: hidden;
   background: white;
   box-shadow: 0 0 4px #E8E6E6;
+  border-radius: 16px;
   transition: transform 0.6s, box-shadow 0.6s;
-  // display: grid;
-  // grid-template-columns: 1fr 1fr 1fr 1fr;
-  // grid-gap: 16px;
 }
 
 .card-index:hover {
@@ -59,3 +57,10 @@
   top: -30px;
   width: 50px;
 }
+
+// #card-index-numbers {
+//   padding: 16px;
+//   display: flex;
+//   justify-content: right;
+//   align-items: flex-start;
+// }
