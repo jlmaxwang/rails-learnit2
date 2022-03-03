@@ -54,7 +54,7 @@
   padding: 16px;
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
+  align-items: flex-start;
   position: relative;
   color: black;
 }
@@ -67,9 +67,8 @@
   height: 40px;
 }
 
-// #card-index-numbers {
-//   padding: 16px;
-//   display: flex;
-//   justify-content: right;
-//   align-items: flex-start;
-// }
+#card-index-numbers {
+  padding: 16px;
+  justify-content: right;
+  align-items: flex-start;
+}
