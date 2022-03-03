@@ -1,9 +1,18 @@
+.container-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 16px;
+  margin: 100px;
+}
 .card-index {
   overflow: hidden;
   background: white;
   box-shadow: 0 0 4px #E8E6E6;
   border-radius: 16px;
   transition: transform 0.6s, box-shadow 0.6s;
+  position: relative;
+  display: flex;
+  flex-direction: column;
 }
 
 .card-index:hover {
@@ -13,19 +22,17 @@
   box-shadow: 0 10px 10px rgba(0,0,0,0.23), 0 15px 40px rgba(166,173,201,.2);
 }
 
-.container-cards {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 16px;
-  margin: 100px;
+.card-index a:link {
+  text-decoration: none;
 }
+
 
 .card-index-rating {
   display: flex;
   justify-content: flex-end;
 }
 
-.card-index > img {
+.card-index img {
   height: 200px;
   width: 100%;
   object-fit: cover;
@@ -54,8 +61,9 @@
 .card-index-infos .card-index-user {
   position: absolute;
   right: 16px;
-  top: -30px;
-  width: 50px;
+  top: -20px;
+  width: 40px;
+  height: 40px;
 }
 
 // #card-index-numbers {

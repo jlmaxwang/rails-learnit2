@@ -6,29 +6,28 @@
   <div class="container-cards">
       <% @lessons.each do |lesson| %>
         <div class="card-index mb-3">
-          <%= cl_image_tag lesson.photo.key %>
-          <div class="card-index-infos">
-            <div>
-              <h2><%= lesson.title %></h2>
-              <p><%= lesson.category %></p>
-              <p><%= lesson.description %></p>
-              <p><%= link_to "Details", lesson_path(lesson), class: "btn btn-gradient"%></p>
-            </div>
-            <div>
-              <h2 class="card-index-rating"><%= "$#{lesson.price}" %></h2>
-              <p class="card-index-rating"><%= "★ #{lesson.rating}" %></p>
-              <p><%= link_to "Sessions", lesson_sessions_path(lesson), class: "btn btn-gradient"%></p>
-            </div>
+          <%= link_to lesson_path(lesson) do %>
+            <%= cl_image_tag lesson.photo.key %>
+            <div class="card-index-infos">
+              <div>
+                <h2><%= lesson.title %></h2>
+                <p><%= lesson.category %></p>
+                <p><%= lesson.description %></p>
+              </div>
+              <div>
+                <h2 class="card-index-rating"><%= "$#{lesson.price}" %></h2>
+                <p class="card-index-rating"><%= "★ #{lesson.rating}" %></p>
+              </div>
 
-              <% if !current_user.nil? %>
-                <% if lesson.user.avatar.present? %>
-                  <%= image_tag lesson.user.avatar, class: "card-index-user avatar-bordered" %>
-                <% else %>
-                    <%= image_tag "https://res.cloudinary.com/fantastic-four/image/upload/v1646222179/development/5gcjh4kw0fvinmnk97ihx41v3v0a.gif",class: "card-index-user avatar-bordered" %>
-              <% end %>
-              <% end %>
-            <%# <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-index-user avatar-bordered" /> %>
-          </div>
+                <% if !current_user.nil? %>
+                  <% if lesson.user.avatar.present? %>
+                    <%= image_tag lesson.user.avatar, class: "card-index-user avatar-bordered" %>
+                  <% else %>
+                      <%= image_tag "https://res.cloudinary.com/fantastic-four/image/upload/v1646222179/development/5gcjh4kw0fvinmnk97ihx41v3v0a.gif",class: "card-index-user avatar-bordered" %>
+                  <% end %>
+                <% end %>
+            </div>
+          <% end %>
         </div>
       <% end %>
   </div>
