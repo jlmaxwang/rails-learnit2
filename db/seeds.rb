@@ -11,7 +11,7 @@
 # Lesson.create(title: 'Flexing on Your Haters 💪', category: 'Lifestyle', rating: '5', user_id: '1', price: 99.99, description: "Lesson 1: They ain't sh*t")
 # Lesson.create(title: 'Pottery 🏺', category: 'Art', rating:'4', user_id: '1', price: 12.50, description: 'Lean to build fancy pots')
 # Lesson.create(title: 'Badminton 🏸', category: 'Sport', rating: '5', user_id: '1', price: 77.64, description: "It's a real sport!")
-# Lesson.create(title: 'Shredding 🎸', category: 'Music', rating: '2', user_id: '1', price: 83.12, description: "For when chords aren't enough")
+# Lesson.create(title: 'Shredding 🎸', category: 'Music', rating: '2', user_id: '1', price: 83.12, description: "For when four chords aren't enough")
 # Lesson.create(title: 'Crypto 💰', category: 'Finance', rating: '4', user_id: '1', price: 50.00, description: 'To the moon!')
 # Lesson.create(title: 'NFTs 101 🤪', category: 'Scams', rating: '1', user_id: '1', price: 12.50, description: "It's legit - trust me!")
 # Lesson.create(title: 'Mountaineering 🏔', category: 'Sport', rating: '4', user_id: '1', price: 70.00, description: 'Stand on top of the world')

@@ -4,14 +4,15 @@
 <div>
   <ul>
   <%= cl_image_tag @lesson.photo.key, height: 300, width: 400, crop: :fill %>
-    <li>Lesson name:<%= @lesson.title %></li>
-    <li>Lesson category:<%= @lesson.category %></li>
-    <li>Lesson rating:<%= "★ #{@lesson.rating}" %></li>
-    <li>Lesson tutor:<%= @lesson.user.email %></li>
+    <li>Lesson name: <%= @lesson.title %></li>
+    <li>Lesson category: <%= @lesson.category %></li>
+    <li>Lesson rating: <%= "★ #{@lesson.rating}" %></li>
+    <li>Lesson description: <%= @lesson.description %></li>
+    <li>Lesson tutor: <%= @lesson.user.email %></li>
   </ul>
 </div>
-<%= link_to"Lessons index", lessons_path %>
-<%= link_to"edit this lesson", edit_lesson_path %>
-<%= link_to "Delete this lesson", @lesson, method: :delete, data:{ confirm: 'Are you sure?' }  %>
-<%= link_to "add a new session", new_lesson_session_path(params[:id]) %>
-<%= link_to "show session", lesson_sessions_path(params[:id]) %>
+<%= link_to"Go back", lessons_path, class: "btn btn-gradient" %>
+<%= link_to"Edit", edit_lesson_path, class: "btn btn-gradient" %>
+<%= link_to "Delete", @lesson, method: :delete, data:{ confirm: 'Are you sure?' }, class: "btn btn-gradient" %>
+<%= link_to "Book session", new_lesson_session_path(params[:id]), class: "btn btn-gradient" %>
+<%= link_to "View available times", lesson_sessions_path(params[:id]), class: "btn btn-gradient" %>
