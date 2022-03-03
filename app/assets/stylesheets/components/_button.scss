@@ -4,11 +4,24 @@
   border-radius: 4px;
   font-weight: bold;
   background: linear-gradient(#FFB835, #c78f26);
-  transition: 0.5s ease-in-out;
   border: 1px solid #FFB835;
 }
 
 .btn-gradient:hover {
+  background: linear-gradient(#d69a29, #aa7b24);
+  color: white;
+}
+
+.btn {
+  color: white;
+  padding: 3px 24px;
+  border-radius: 4px;
+  font-weight: bold;
+  background: linear-gradient(#FFB835, #c78f26);
+  border: 1px solid #FFB835;
+}
+
+.btn:hover {
   background: linear-gradient(#d69a29, #aa7b24);
   color: white;
 }
