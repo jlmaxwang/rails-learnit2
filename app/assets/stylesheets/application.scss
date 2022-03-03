@@ -8,6 +8,7 @@
 @import "font-awesome-sprockets";
 @import "font-awesome";
 
+
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
@@ -17,12 +18,18 @@
   .container-cards {
     grid-template-columns: 1fr;
   }
+  .container {
+    width: 300px;
+  }
 }
 
 // Small devices (landscape phones, 576px and up)
 @media (min-width: 576px) {
   .container-cards {
     grid-template-columns: 1fr;
+  }
+  .container {
+    width: 300px;
   }
 }
 
@@ -31,12 +38,18 @@
   .container-cards {
     grid-template-columns: 1fr 1fr;
   }
+  .container {
+    width: 500px;
+  }
 }
 
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) {
   .container-cards {
     grid-template-columns: 1fr 1fr 1fr;
+  }
+  .container {
+    width: 700px;
   }
 }
 
@@ -45,9 +58,32 @@
   .container-cards {
     grid-template-columns: 1fr 1fr 1fr;
   }
+  .container {
+    width: 1000px;
+  }
 }
 .page-header {
   text-align: center;
   color: #FFB835;
   text-shadow: rgba(0, 0, 0, 0.4) 0px 4px 5px;
+}
+
+.footer {
+  text-align: center;
+  padding: 30px;
+  background-color: #C7C7C7;
+}
+
+.footer a {
+  font-size: 30px;
+  color: #FFB835;
+  text-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px;
+}
+
+.footer p {
+  color: #6B6C6C;
+}
+
+.footer .fas {
+  color: #BF0F12;
 }
