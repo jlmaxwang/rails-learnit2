@@ -5,9 +5,9 @@
     <% end %>
     <div class="column d-flex justify-content-center flex-nowrap">
           <%= form_with(url: "/lessons", method: :get, data: {action: "submit->search#submit"}) do |f| %>
-          <%= label_tag(:query, "") %>
-          <%= text_field_tag(:query) %>
-          <%= submit_tag("Search", class: "btn-gradient") %>
+            <%= label_tag(:query, "Find a lesson:") %>
+            <%= text_field_tag(:query, "") %>
+            <%= submit_tag("🔎", class: "btn-gradient") %>
           <% end %>
       </div>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
