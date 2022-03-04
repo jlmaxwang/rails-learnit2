@@ -89,5 +89,12 @@
 }
 
 .learnit-center {
-    margin: 10px 500px;
+  height: 500px;
+  width: 500px;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
