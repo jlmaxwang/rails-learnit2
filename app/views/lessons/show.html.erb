@@ -19,7 +19,7 @@
     <%= link_to "Go back", lessons_path, class: "btn btn-gradient" %>
     <%= link_to "Edit", edit_lesson_path, class: "btn btn-gradient" %>
     <%= link_to "Delete", @lesson, method: :delete, data:{ confirm: 'Are you sure?' }, class: "btn btn-gradient" %>
-    <%= link_to "Book session", new_lesson_session_path(params[:id]), class: "btn btn-gradient" %>
+    <%= link_to "Create new session", new_lesson_session_path(params[:id]), class: "btn btn-gradient" %>
     <%= link_to "View available times", lesson_sessions_path(params[:id]), class: "btn btn-gradient" %>
   </div>
 </div>

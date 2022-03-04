@@ -19,7 +19,7 @@
   height: 400px;
   width: 100%;
   object-fit: cover;
-  filter: brightness(70%);
+  filter: brightness(80%);
   z-index: -1;
 }
 
@@ -38,13 +38,10 @@
   text-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px;
 }
 
-
-
-// #show-container h1 {
-//   position: absolute;
-//   text-align: center;
-//   color: white;
-// }
+.show-info {
+ text-align: center;
+ margin-top: 10px;
+}
 
 // Index page containers and cards
 .container-cards {
@@ -123,7 +120,8 @@
   align-items: flex-start;
 }
 
-.show-info {
- text-align: center;
- margin-top: 10px;
+// Sessions show page
+.sessions-show {
+  padding: 16px;
+  text-align: center;
 }
