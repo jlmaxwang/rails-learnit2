@@ -1,19 +1,19 @@
 <%= render 'shared/navbar' %>
-<div id="page-container">
-  <div id="show-container-title">
-    <%= cl_image_tag @lesson.photo.key %>
-  </div>
-  <div id="lesson-title">
-    <h1><%= @lesson.title %></h1>
-    <p style="text-align: center"><%= "#{@lesson.category} | ★ #{@lesson.rating}" %></p>
-  </div>
-  <div>
-    <ul>
-      <li>Lesson description: <%= @lesson.description %></li>
-      <li>Lesson tutor: <%= @lesson.user.email %></li>
-    </ul>
-  </div>
+<div id="show-container-title">
+  <%= cl_image_tag @lesson.photo.key %>
 </div>
+<div id="lesson-title">
+  <h1><%= @lesson.title %></h1>
+  <p style="text-align: center"><%= "#{@lesson.category} | ★ #{@lesson.rating}" %></p>
+</div>
+<div>
+  <ul>
+    <li>Lesson description: <%= @lesson.description %></li>
+    <li>Lesson tutor: <%= @lesson.user.email %></li>
+  </ul>
+</div>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<div class="centered">
     <%= link_to "Go back", lessons_path, class: "btn btn-gradient" %>
     <%= link_to "Edit", edit_lesson_path, class: "btn btn-gradient" %>
     <%= link_to "Delete", @lesson, method: :delete, data:{ confirm: 'Are you sure?' }, class: "btn btn-gradient" %>

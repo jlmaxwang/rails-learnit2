@@ -1,10 +1,4 @@
 // Show page containers and cards
-#page-container {
-  display: flex;
-  height: 100%;
-  width: 100%
-}
-
 #show-container-title {
   position: relative;
   display: flex;
@@ -112,4 +106,8 @@
   padding: 16px;
   justify-content: right;
   align-items: flex-start;
+}
+
+.centered {
+  text-align: center;
 }
