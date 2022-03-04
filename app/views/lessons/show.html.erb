@@ -1,26 +1,30 @@
 <%= render 'shared/navbar' %>
-<div id="page-container">
-  <div id="show-container-title">
-  <% if @lesson.photo.key.nil? %>
-    <%= image_tag "https://res.cloudinary.com/fantastic-four/image/upload/v1646114853/AVIN_Learning_Logo_640_x_360_px_2_bnhtki.png" %>
-  <% else %>
-    <%= cl_image_tag @lesson.photo.key %>
-  <% end %>
-  </div>
-  <div id="lesson-title">
-    <h1><%= @lesson.title %></h1>
-    <p style="text-align: center"><%= "#{@lesson.category} | ★ #{@lesson.rating}" %></p>
-  </div>
-  <div>
-    <ul>
-      <li>Lesson description: <%= @lesson.description %></li>
-      <li>Lesson tutor: <%= @lesson.user.email %></li>
-    </ul>
+
+<div class="wrapper">
+  <div id="show-container-background">
+    <% if @lesson.photo.key.nil? %>
+      <%= image_tag "https://res.cloudinary.com/fantastic-four/image/upload/v1646114853/AVIN_Learning_Logo_640_x_360_px_2_bnhtki.png" %>
+    <% else %>
+      <%= cl_image_tag @lesson.photo.key %>
+    <% end %>
+    <div id="show-title">
+      <div>
+        <h1 id="show-header"><%= @lesson.title %></h1>
+      </div>
+      <div>
+        <p id="show-header"><%= "#{@lesson.category} | ★ #{@lesson.rating}" %></p>
+      </div>
+    </div>
   </div>
 </div>
+<div>
+  <div class="show-info">
+    <p ><%= @lesson.description %></p>
+    <p><%= @lesson.user.email %></p>
     <%= link_to "Go back", lessons_path, class: "btn btn-gradient" %>
     <%= link_to "Edit", edit_lesson_path, class: "btn btn-gradient" %>
     <%= link_to "Delete", @lesson, method: :delete, data:{ confirm: 'Are you sure?' }, class: "btn btn-gradient" %>
     <%= link_to "Book session", new_lesson_session_path(params[:id]), class: "btn btn-gradient" %>
     <%= link_to "View available times", lesson_sessions_path(params[:id]), class: "btn btn-gradient" %>
+  </div>
 </div>
