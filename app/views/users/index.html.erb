@@ -1,5 +1,5 @@
 <%= render 'shared/navbar' %>
-<h1>user dashboard</h1>
+<h1><%= "Welcome aboard #{@user.username}" %></h1>
 <h2 class="text-center">Your lessons</h2>
 <% if @lessons.blank? %>
   <p>You don't have any lessons created</p>
@@ -25,3 +25,4 @@
   <% end %>
 </div>
 <h2 class="text-center">Your sessions</h2>
+<p>You don't have any sessions yet</p>
