@@ -27,4 +27,8 @@ class SessionPolicy < ApplicationPolicy
   def destroy?
     record.user == user  # Only session creator can update it
   end
+
+  def confirmation?
+    true
+  end
 end
