@@ -1,7 +1,7 @@
 <%= render 'shared/navbar' %>
 <br>
 <h1 class="page-header">Create a new lesson</h1>
-<div class="form">
+<div class="learnit-center">
   <%= simple_form_for @lesson do |f| %>
       <%= f.input :title %>
       <%= f.input :category %>
@@ -13,5 +13,5 @@
       <%= f.input :photo, as: :file %>
       <%= f.button :submit %>
   <% end %>
-</div>
 <%= link_to "Back", lessons_path %>
+</div>
