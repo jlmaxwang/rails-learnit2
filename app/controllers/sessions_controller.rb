@@ -53,6 +53,9 @@ class SessionsController < ApplicationController
     redirect_to lesson_path(@lesson), notice: "Session deleted"
   end
 
+  def confirmation
+  end
+
   private
 
   def set_lesson

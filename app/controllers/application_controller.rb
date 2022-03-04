@@ -8,7 +8,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   before_action :authenticate_user!
 
-  after_action :verify_authorized, except: [:index, :home], unless: :skip_pundit?
+  after_action :verify_authorized, except: [:index, :home, :confirmation], unless: :skip_pundit?
   after_action :verify_policy_scoped, only: [:index, :home], unless: :skip_pundit?
   before_action :configure_permitted_parameters, if: :devise_controller?
 
