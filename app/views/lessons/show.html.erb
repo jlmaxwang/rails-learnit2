@@ -1,10 +1,10 @@
 <%= render 'shared/navbar' %>
 <div id="page-container">
   <div id="show-container-title">
-  <% if @lesson.photo.nil? %>
-    <%= img_tag "https://res.cloudinary.com/fantastic-four/image/upload/v1646114853/AVIN_Learning_Logo_640_x_360_px_2_bnhtki.png" %>
+  <% if @lesson.photo.key.nil? %>
+    <%= image_tag "https://res.cloudinary.com/fantastic-four/image/upload/v1646114853/AVIN_Learning_Logo_640_x_360_px_2_bnhtki.png" %>
   <% else %>
-    <%= cl_image_tag @lesson.photo.key %>
+    <%= cl_image_tag lesson.photo.key %>
   <% end %>
   </div>
   <div id="lesson-title">
