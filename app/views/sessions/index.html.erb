@@ -9,7 +9,10 @@
     <% @sessions.each do |session| %>
       <li><%= session.schedule %></li>
   <% end %>
+      <% if false %>
+      <%# comm %>
       <%= link_to 'Destroy', @session, method: :delete, data: { confirm: 'Are you sure?' } %>
+      <% end %>
   <% end %>
 </ul>
 </body>

@@ -6,6 +6,33 @@
 <%= @lesson.price %>
 <%= @lesson.description %>
 <%# All @lesson variables are now reachable %>
+<h1><%= "Welcome aboard #{@user.username}" %></h1>
+<h2 class="text-center">Your lessons</h2>
+<% if @lessons.blank? %>
+  <p>You don't have any lessons created</p>
+<% else %>
+<div class="row align-items-start ms-3">
+  <% @lessons.each do |lesson| %>
+      <div class="card ms-3" style="width: 18rem;">
+        <% if lesson.photo.key.nil? %>
+          <%= image_tag "https://res.cloudinary.com/fantastic-four/image/upload/v1646114853/AVIN_Learning_Logo_640_x_360_px_2_bnhtki.png", class: "card-img-top", alt: "default img" %>
+        <% else %>
+          <%= cl_image_tag lesson.photo.key, class: 'card-img-top', alt: "lesson img"%>
+        <% end %>
+        <div class="card-body">
+          <h5 class="card-title"><%= lesson.title %></h5>
+          <p class="card-text"><%= lesson.description %></p>
+          <p class="card-text"><%= lesson.category %></p>
+          <p class="card-text"><%= lesson.price %></p>
+          <%= link_to "Delete this lesson", lesson, method: :delete, data:{ confirm: 'Are you sure?' }, class: "btn btn-gradient" %>
+          <%= link_to "Update this lesson", edit_lesson_path(lesson), class: "btn btn-gradient" %>
+        </div>
+      </div>
+    <% end %>
+  <% end %>
+</div>
+<h2 class="text-center">Your sessions</h2>
+<p>You don't have any sessions yet</p>
 <div class="footer2">
 <%= render 'shared/footer' %>
 </div>
