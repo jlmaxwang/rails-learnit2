@@ -1,5 +1,5 @@
 <%= render 'shared/navbar' %>
-
+<div>
 <div class="learnit-center">
 <h1 class="page-header">Create a new session for <%= @lesson.title %></h1>
 <%= simple_form_for([ @lesson, @session ]) do |f| %>
@@ -10,3 +10,5 @@
   <%= f.submit "Submit session" %>
 <% end %>
 </div>
+</div>
+<%= render 'shared/footer' %>
