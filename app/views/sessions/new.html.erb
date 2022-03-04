@@ -4,6 +4,7 @@
 <%= simple_form_for([ @lesson, @session ]) do |f| %>
   <%= f.input :schedule, as: :datetime, html5: true %>
   <%= f.association :lesson %>
-  <%= f.input :user_id %>
+  <%= f.association :user, label: false,
+  :as => :hidden, :input_html => { :value => current_user.id }  %>
   <%= f.submit "Submit session" %>
 <% end %>
