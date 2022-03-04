@@ -7,6 +7,7 @@ class UsersController < ApplicationController
     @lessons_ids.each do |lesson_id|
       @lesson = Lesson.find(lesson_id)
     end
+    @lesson =
   end
 
   private
