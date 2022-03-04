@@ -4,9 +4,7 @@ class UsersController < ApplicationController
   def index
     @user = policy_scope(current_user)
     @lessons_ids = @user.lesson_ids
-    @lessons_ids.each do |lesson_id|
-      @lesson = Lesson.find(lesson_id)
-    end
+    @lessons = Lesson.find(@lessons_ids)
   end
 
   private
