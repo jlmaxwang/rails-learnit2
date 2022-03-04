@@ -1,5 +1,5 @@
 <%= render 'shared/navbar' %>
-
+<body>
 <h1>sessions</h1>
 <h2>lesson name: <%= @lesson.title %></h2>
 <ul>
@@ -12,3 +12,7 @@
       <%= link_to 'Destroy', @session, method: :delete, data: { confirm: 'Are you sure?' } %>
   <% end %>
 </ul>
+</body>
+<div class="footer2">
+<%= render 'shared/footer' %>
+</div>
