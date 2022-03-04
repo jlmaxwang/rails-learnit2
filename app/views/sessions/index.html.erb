@@ -12,8 +12,8 @@
         <% else %>
           <% @sessions.each do |session| %>
             <%= session.schedule %></li>
-            <%= link_to "Book now!", confirmation_lesson_sessions_path %>
           <% end %>
+            <%= link_to "Book now!", confirmation_lesson_sessions_path %>
         <% end %>
         <div class="sessions-show">
             <%= link_to "Delete a session", @session, method: :delete, data:{ confirm: 'Are you sure?' }, class: "btn btn-gradient" %>
