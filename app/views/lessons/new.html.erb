@@ -1,17 +1,16 @@
 <%= render 'shared/navbar' %>
-<br>
-<h1 class="page-header">Create a new lesson</h1>
-<div class="form">
-  <%= simple_form_for @lesson do |f| %>
-      <%= f.input :title %>
-      <%= f.input :category %>
-      <%= f.input :rating %>
-      <%= f.input :price %>
-      <%= f.input :description %>
-      <%= f.association :user, label: false,
-  :as => :hidden, :input_html => { :value => current_user.id }  %>
-      <%= f.input :photo, as: :file %>
-      <%= f.button :submit %>
-  <% end %>
+<div class="learnit-center">
+  <h1 class="page-header">Create a new lesson</h1>
+    <%= simple_form_for @lesson do |f| %>
+        <%= f.input :title %>
+        <%= f.input :category %>
+        <%= f.input :rating %>
+        <%= f.input :price %>
+        <%= f.input :description %>
+        <%= f.association :user, label: false,
+    :as => :hidden, :input_html => { :value => current_user.id }  %>
+        <%= f.input :photo, as: :file %>
+        <%= f.button :submit %>
+    <% end %>
+  <%= link_to "Back", lessons_path %>
 </div>
-<%= link_to "Back", lessons_path %>
