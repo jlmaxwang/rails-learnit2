@@ -20,6 +20,7 @@
               <div id="card-index-numbers">
                 <h2 class="card-index-rating"><%= "$#{lesson.price}" %></h2>
                 <p class="card-index-rating"><%= "★ #{lesson.rating}" %></p>
+                <p class="card-index-rating"><%= "Tutoring by #{lesson.user.username}" %></p>
               </div>
 
                 <% if !current_user.nil? %>
