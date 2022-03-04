@@ -1,11 +1,4 @@
 <%= render 'shared/navbar' %>
-<h1>user dashboard</h1>
-<h2>Your lessons</h2>
-<%= @lesson.title %>
-<%= @lesson.category %>
-<%= @lesson.price %>
-<%= @lesson.description %>
-<%# All @lesson variables are now reachable %>
 <h1><%= "Welcome aboard #{@user.username}" %></h1>
 <h2 class="text-center">Your lessons</h2>
 <% if @lessons.blank? %>
